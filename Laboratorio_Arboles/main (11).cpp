@@ -5,7 +5,7 @@
 *******************************************************************************/
 #include <bits/stdc++.h>
 #include <iostream>
-#include "modulo.h"
+#include "modulos/modulo.h"
 using namespace std;
 
 
@@ -20,7 +20,7 @@ int main()
     arbol0->left->left->left = new Nodo(-3);
     arbol0->left->left->right = new Nodo(1);
     arbol0->left->right->left = new Nodo(4);
-    arbol0->left->right->left = new Nodo(6);
+    arbol0->left->right->right = new Nodo(6);
     
     arbol0->right->left  = new Nodo(15);
     arbol0->right->right  = new Nodo(25);
