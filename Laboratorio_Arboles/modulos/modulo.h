@@ -2,7 +2,7 @@
 #define __MODULO_H__
 #include <iostream>
 struct Nodo{
-    int dato;
+    int dato;//Dato a almacenar en el nodo
     struct Nodo *left, *right;
     //Contstructor del nodo
     Nodo(int dato){
@@ -11,11 +11,11 @@ struct Nodo{
         left = right = nullptr;
     }
 };
-
+//Preorder
 void preOrdenT(struct Nodo *nodo);
-
+//Postorder
 void postOrdenT(struct Nodo *nodo);
-
+//Inorder
 void inOrdenT(struct Nodo *nodo);
 
 #endif
