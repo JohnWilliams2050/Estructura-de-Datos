@@ -1,17 +1,21 @@
 #ifndef __MODULO_H__
 #define __MODULO_H__
-
-struct Node {
-    int dato; //Dato a almacenar en el nodo
+#include <iostream>
+struct Nodo{
+    int dato;
     struct Nodo *left, *right;
+    //Contstructor del nodo
     Nodo(int dato){
         this->dato = dato;
-        left  = right = NULL;
+        //inicia sin tener nada dentro de los nodos hijos, iniciando como nodo hoja
+        left = right = nullptr;
     }
 };
 
-void preOrdenT(strct Nodo *nodo);
+void preOrdenT(struct Nodo *nodo);
 
-void postOrdenT(strct Nodo *nodo);
+void postOrdenT(struct Nodo *nodo);
 
-void inOrdenT(strct Nodo *nodo);
+void inOrdenT(struct Nodo *nodo);
+
+#endif
