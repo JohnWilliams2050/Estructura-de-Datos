@@ -1,25 +1,34 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include "modulo.h"
 
-
-
-void preOrdenT(Nodo *nodo){
+using namespace std;
+//
+void preOrdenT(struct Nodo *nodo){
     if (nodo==NULL){
         return;
     }
     cout<<nodo->dato<<"->";
-    preOrden(nodo->left);
-    preOrden(nodo->right);
+    preOrdenT(nodo->left);
+    preOrdenT(nodo->right);
 }
-
-void postOrdenT(Nodo *nodo)
+//
+void postOrdenT(struct Nodo *nodo)
 {
-    if (nodo==NULL)
+    if (nodo==NULL){
         return;
-    postOrden(nodo->left);
-    postOrden(nodo->right);
+    }
+    postOrdenT(nodo->left);
+    postOrdenT(nodo->right);
     cout<< nodo->dato<<"->";
 }
 
-void inOrden(Nodo *nodo)
+void inOrdenT(struct Nodo *nodo)
 {
-    if (nodo)
+    if (nodo==NULL){
+        return;
+    }
+    inOrdenT(nodo->left);
+    cout<<nodo->dato<<"->";
+    inOrdenT(nodo->right);
 }
