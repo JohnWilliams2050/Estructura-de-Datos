@@ -1,7 +1,8 @@
 /******************************************************************************
- * Juan Pabon Vargas
- * 3/5/2025
-
+ * Autor: Juan Pabon Vargas
+ * Fecha: 3 de Marzo, 2025
+ * Curso: Estructura de Datos
+ * Descripción: En este programa se van a imprimir los nodos de un árbol de ejemplo dado en clase en Preorder, PostOrder, y Inorder. Se usó modulación.
 *******************************************************************************/
 #include <bits/stdc++.h>
 #include <iostream>
