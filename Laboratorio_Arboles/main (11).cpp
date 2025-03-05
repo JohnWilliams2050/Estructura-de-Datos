@@ -5,11 +5,13 @@
 *******************************************************************************/
 #include <bits/stdc++.h>
 #include <iostream>
+#include "modulo.h"
 using namespace std;
 
 
 int main()
 {
+    //Se construye el arbol de prueba
     struct Nodo *arbol0 = new Nodo(7);
     arbol0->left = new Nodo(3);
     arbol0->right  = new Nodo(20);
@@ -24,11 +26,13 @@ int main()
     arbol0->right->right  = new Nodo(25);
     arbol0->right->right->right  = new Nodo(30);
     
+    //realiza los procesos
     cout<<"\n PreOrden ";
-    preOrden(arbol0);
+    preOrdenT(arbol0);
     cout<<"\n PostOrden ";
-    postOrden(arbol0);
-    cout<<"\n InOrden "
+    postOrdenT(arbol0);
+    cout<<"\n InOrden ";
+    inOrdenT(arbol0);
 
     return 0;
 }
