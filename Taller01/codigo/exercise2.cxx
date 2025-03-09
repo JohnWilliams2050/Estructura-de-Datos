@@ -1,6 +1,10 @@
 // exercise1.cxx (Andrea Rueda)
 
 // Main program that uses the functionality of rectangle.h
+/*
+* Comantador: Juan Pabon Vargas
+* En este programa se crea un rectángulo y se ejecuta una operaciones para determina el Área, Perímetro y la distancia del rectángulo al origen
+*/
 
 #include <iostream>
 #include "rectangle.h"
