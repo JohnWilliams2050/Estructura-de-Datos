@@ -1,6 +1,6 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-
+//La estructura Rectangle
 struct Rectangle {
   float posX;
   float posY;
