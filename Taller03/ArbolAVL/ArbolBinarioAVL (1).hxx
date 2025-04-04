@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol AVL
+**/
 #include "ArbolBinarioAVL.h"
 #include <queue>
 #include <iostream>
