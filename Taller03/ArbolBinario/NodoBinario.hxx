@@ -8,50 +8,53 @@
 
 using namespace std;
 
+
+//Constructor por defecto 
 template<class T>
 NodoBinario<T>::NodoBinario()
 {
     this->hijoIzq=NULL;
     this->hijoDer=NULL;
 }
-
+//Getter del atributo de nombre dato
 template<class T>
 T& NodoBinario<T>::obtenerDato()
 {
     return this->dato;
 }
+//Setter del atributo de nombre dato
 template<class T>
 void NodoBinario<T>::fijarDato(T& val)
 {
     this->dato = val;
 }
-
+//Getter del apuntador al hijo izquierdo
 template<class T>
 NodoBinario<T>* NodoBinario<T>::obtenerHijoIzq()
 {
     return this->hijoIzq;
 }
-
+//Getter del apuntador al hijo derecho
 template<class T>
 NodoBinario<T>* NodoBinario<T>::obtenerHijoDer()
 {
     return this->hijoDer;
 }
-
+//Setter del hijo izquierdo del nodo
 template<class T>
 void NodoBinario<T>::fijarHijoIzq(NodoBinario<T> *izq)
 {
     this->hijoIzq = izq;
     return;
 }
-
+//Setter del hijo derecho del nodo
 template<class T>
 void NodoBinario<T>::fijarHijoDer(NodoBinario<T> *der)
 {
     this->hijoDer = der;
     return;
 }
-
+//retorna la altura del nodo
 template<class T>
 int NodoBinario<T>::altura()
 {
@@ -68,7 +71,7 @@ int NodoBinario<T>::altura()
 	return max(this->hijoIzq->altura() , this->hijoDer->altura());
 }
 
-
+//retorna la cantidad de nodos en el arbol
 template<class T>
 int NodoBinario<T>::tamano()
 {
@@ -84,7 +87,7 @@ int NodoBinario<T>::tamano()
 
 	return this->hijoIzq->tamano() + this->hijoDer->tamano() +1 ;
 }
-
+//inserta un nodo con el valor val
 template<class T>
 void NodoBinario<T>:: insertar(T& val)
 {
@@ -117,7 +120,7 @@ void NodoBinario<T>:: insertar(T& val)
 
 }
 
-
+//busca el nodo con valor val
 template<class T>
 NodoBinario<T>* NodoBinario<T>:: buscar(T& val)
 {
@@ -139,7 +142,7 @@ NodoBinario<T>* NodoBinario<T>:: buscar(T& val)
 	}
 }
 
-
+//Retorna un apuntador al nodo que mas se encuentra a la derecha
 template<class T>
 NodoBinario<T>* NodoBinario<T>::extremo_der()
 {
@@ -148,7 +151,7 @@ NodoBinario<T>* NodoBinario<T>::extremo_der()
     else
         return this;
 }
-
+//Retorna un apuntador al nodo que se encuentra mas a la izquierda
 template<class T>
 NodoBinario<T>* NodoBinario<T>::extremo_izq()
 {
@@ -158,7 +161,7 @@ NodoBinario<T>* NodoBinario<T>::extremo_izq()
         return this;
 }
 
-
+//Imprime los recorridos del arbol
 template<class T>
 void NodoBinario<T>:: preOrden()
 {
