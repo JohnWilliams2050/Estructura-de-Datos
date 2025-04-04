@@ -1,7 +1,7 @@
 /**
- * Tomas Alejandro Silva Correal
- * Taller 03. Arboles
- * Arbol rojo-negro
+* Taller 03. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol rojo-negro
 **/
  
    #include <bits/stdc++.h>
