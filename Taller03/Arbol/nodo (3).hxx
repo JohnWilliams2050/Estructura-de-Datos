@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Nodo
+**/
 #include <iostream>
 #include "nodo.h"
 
