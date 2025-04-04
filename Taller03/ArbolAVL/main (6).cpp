@@ -11,11 +11,13 @@ int main(int argc, char* argv[])
 	{
 		int dato;
 		char op;
+		//Se selecciona que accion quiere tomar
 		cout<<endl<<"Digite si desea agregar (A), eliminar (E) o finalizar (F): ";
 		cin>>op;
 		
 		if(op == 'A' || op == 'a' || op == 'E' || op == 'e' || op == 'F' || op == 'f'){
     		if(op == 'A' || op == 'a'){
+			//se ingresa el nodo
     		    cout<<"Ahora digite el valor a agregar: ";
     		    cin>>dato;	
     			arbolito.insertar(dato);
@@ -23,8 +25,10 @@ int main(int argc, char* argv[])
     		else if(op == 'E' || op == 'e'){
     		    cout<<"Ahora digite el valor a eliminar: ";
     		    cin>>dato;	
+			//se elimina el nodo
     			arbolito.eliminar(dato);
     		}
+		//termina de preguntar
     		else if(op == 'F' || op == 'f')
     			break;
 		}
@@ -32,7 +36,7 @@ int main(int argc, char* argv[])
 		    cout<<"El valor no es posible digite nuevamente"<<endl;
 		   
 	}
-	
+	//Impresion de recorridos
 	cout << endl << "Inorden: " << endl;
 	arbolito.inOrden(arbolito.getRaiz());
 	cout << endl << "PreOrden: " << endl;
