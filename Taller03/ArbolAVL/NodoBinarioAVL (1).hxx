@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* nodo AVL
+**/
 #include "NodoBinarioAVL.h"
 
 using namespace std;
