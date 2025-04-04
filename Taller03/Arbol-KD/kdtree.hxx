@@ -1,7 +1,7 @@
 /**
 * Taller 3. Arboles
 * Autores: Tomas Silva, Juan Pabon Vargas
-* Arbol
+* Arbol KD
 **/
 #include "kdtree.h"
 #include "kdnodo.h"
