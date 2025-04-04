@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Nodo
+**/
 #ifndef __NODO__H__
 #define __NODO__H__
 
