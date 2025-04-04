@@ -9,6 +9,7 @@
 #include <vector>
 using namespace std;
 
+//Constructor
 template<class T>
 kdnodo<T>::kdnodo()
 {
@@ -16,49 +17,49 @@ kdnodo<T>::kdnodo()
     this->hijoDer = nullptr;
     this->tag = 0;
 }
-
+//Get para dato
 template<class T>
 vector <T> kdnodo<T>::obtenerDato()
 {
     return this->datos;
 }
-
+//Set para dato
 template<class T>
 void kdnodo<T>::fijarDato(vector <T>& val)
 {
     this->datos = val;
 }
-
+//Set para el tag
 template<class T>
 void kdnodo<T>::fijarTag(int value)
 {
     this->tag = value;
 }
-
+//Get del hijo izquierdo
 template<class T>
 kdnodo<T>* kdnodo<T>::obtenerHijoIzq()
 {
     return this->hijoIzq;
 }
-
+//Get del hijo derecho
 template<class T>
 kdnodo<T>* kdnodo<T>::obtenerHijoDer()
 {
     return this->hijoDer;
 }
-
+//Set del hijo izquierdo
 template<class T>
 void kdnodo<T>::fijarHijoIzq(kdnodo<T> *izq)
 {
     this->hijoIzq = izq;
 }
-
+//Set del hijo derecho
 template<class T>
 void kdnodo<T>::fijarHijoDer(kdnodo<T> *der)
 {
     this->hijoDer = der;
 }
-
+//Retorna la altura
 template<class T>
 int kdnodo<T>::altura()
 {
@@ -75,7 +76,7 @@ int kdnodo<T>::altura()
 	return max(this->hijoIzq->altura(), this->hijoDer->altura());
 }
 
-
+//Retorna el tamaño
 template<class T>
 int kdnodo<T>::tamano()
 {
@@ -91,7 +92,7 @@ int kdnodo<T>::tamano()
 
 	return this->hijoIzq->tamano() + this->hijoDer->tamano() +1 ;
 }
-
+//Inserta un valor al arbol
 template<class T>
 void kdnodo<T>:: insertar(vector <T> &val)
 {
@@ -128,7 +129,7 @@ void kdnodo<T>:: insertar(vector <T> &val)
 
 }
 
-
+//Busca un valor del arbol
 template<class T>
 kdnodo<T>* kdnodo<T>:: buscar(vector <T>& val)
 {
@@ -146,7 +147,7 @@ kdnodo<T>* kdnodo<T>:: buscar(vector <T>& val)
 		return this->hijoDer->buscar(val);
 	}
 }
-
+//Revisa si el dato es igual al valor
 template<class T>
 bool kdnodo<T>::iguales(vector <T>& val)
 {
@@ -160,7 +161,7 @@ bool kdnodo<T>::iguales(vector <T>& val)
   return true;
 }
 
-
+//Imprime PreOrder
 template<class T>
 void kdnodo<T>:: preOrden()
 {
@@ -172,7 +173,7 @@ this->imprimir();
 	return;
 }
 
-
+//Imprime InOrder
 template<class T>
 void kdnodo<T>:: inOrden()
 {
@@ -188,7 +189,7 @@ void kdnodo<T>:: inOrden()
 }
 
 
-
+//Imprime PosOrder
 template<class T>
 void kdnodo<T>:: posOrden()
 {
@@ -202,7 +203,7 @@ void kdnodo<T>:: posOrden()
     return;
 }
 
-
+//Imprime NivelOrder
 template<class T>
 void kdnodo<T>:: nivelOrden()
 {
@@ -221,7 +222,7 @@ void kdnodo<T>:: nivelOrden()
 	}
 }
 
-
+//Retorna el maximo del arbol
 template<class T>
 void kdnodo<T>:: maximo(int &maxi)
 {
@@ -238,6 +239,7 @@ void kdnodo<T>:: maximo(int &maxi)
 
 }
 
+//Retorna el minimo del arbol
 template<class T>
 void kdnodo<T>:: minimo(int &mini)
 {
@@ -254,7 +256,7 @@ void kdnodo<T>:: minimo(int &mini)
 
 }
 
-
+//Genera la impresion
 template<class T>
 void kdnodo<T>:: imprimir()
 {
