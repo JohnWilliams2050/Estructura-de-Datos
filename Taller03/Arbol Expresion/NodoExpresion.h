@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* nodo Expresión
+**/
 #ifndef NODOEXPRESION_H
 #define NODOEXPRESION_H
 #include <string.h>
