@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Nodo binario
+**/
 #ifndef __NODOBINARIO__H__
 #define __NODOBINARIO__H__
 
