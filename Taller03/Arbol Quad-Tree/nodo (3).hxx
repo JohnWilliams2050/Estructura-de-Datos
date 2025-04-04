@@ -7,7 +7,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+//Constructores con y sin valor
 template<class T>
 Nodo<T>::Nodo()
 {
@@ -28,7 +28,7 @@ Nodo<T>::Nodo(pair<T,T> val)
     this->SE = NULL;
 }
 
-
+//Get y set para dato
 template<class T>
 pair<T,T> Nodo<T>::obtenerDato()
 {
@@ -41,7 +41,7 @@ void Nodo<T>::fijarDato(pair<T,T> val)
     this->dato = val;
     return;
 }
-
+//Retorna la altura del arbol
 template<class T>
 int Nodo<T>::altura()
 {
@@ -75,7 +75,7 @@ int Nodo<T>::altura()
     }
 }
 
-
+//Retorna el tamaño del arbol
 template<class T>
 int Nodo<T>::tamano()
 {
@@ -101,7 +101,7 @@ int Nodo<T>::tamano()
     }
     return cont;
 }
-
+//Inserta en el arbol
 template<class T>
 void Nodo<T>:: insertar(pair<T,T> val, int max)
 {
@@ -176,7 +176,7 @@ void Nodo<T>:: insertar(pair<T,T> val, int max)
         }
     }
 }
-
+//Busca en el arbol
 template<class T>
 Nodo<T>* Nodo<T>:: buscar(pair<T,T> val)
 {
@@ -241,7 +241,7 @@ Nodo<T>* Nodo<T>:: buscar(pair<T,T> val)
     return NULL;
 
 }
-
+//Imprime PreOrder
 template<class T>
 void Nodo<T>:: preOrden()
 {
@@ -261,7 +261,7 @@ void Nodo<T>:: preOrden()
 
 
 
-
+//Imprime en posOrder
 template<class T>
 void Nodo<T>:: posOrden()
 {
