@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* nodo KD
+**/
 #ifndef __KDNODO__H__
 #define __KDNODO__H__
 #include <vector>
