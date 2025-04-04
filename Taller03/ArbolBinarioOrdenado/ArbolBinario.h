@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol binario ordenado
+**/
 #ifndef ARBOLBINARIO_H
 #define ARBOLBINARIO_H
 #include "NodoBinario.h"
