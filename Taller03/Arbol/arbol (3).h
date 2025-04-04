@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol
+**/
 #ifndef __ARBOL__H__
 #define __ARBOL__H__
 
