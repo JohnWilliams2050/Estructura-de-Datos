@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* nodo Quad-Tree
+**/
 #include "nodo.h"
 #include <bits/stdc++.h>
 
