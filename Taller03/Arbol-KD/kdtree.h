@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol
+**/
 #ifndef __KDTREE__H__
 #define __KDTREE__H__
 
