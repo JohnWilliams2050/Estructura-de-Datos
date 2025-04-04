@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* nodo KD
+**/
 #include "kdnodo.h"
 #include <bits/stdc++.h>
 #include <queue>
