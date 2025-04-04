@@ -15,11 +15,12 @@ int main(int argc, char* argv[])
 	for(int i=0; i<7; i++)
 	{
 		int dato;
+		//se insertan los datos al arbol
 		cout<<"el dato a insertar en el arbol:\n";
 		cin>>dato;
 		arbolito.insertar(dato);
 	}
-	
+	//Impresion de recorridos
 	cout<<"Nivel Orden:\n";
 	arbolito.nivelOrden();
 	cout<<endl<<"PreOrden: \n";
