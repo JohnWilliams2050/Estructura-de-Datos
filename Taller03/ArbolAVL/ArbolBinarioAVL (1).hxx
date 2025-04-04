@@ -19,7 +19,7 @@ void ArbolBinarioAVL<T>::setRaiz(NodoBinarioAVL<T>* raiz){
 	this->raiz=raiz;
 	return;
 }
-
+//devuelve la raiz
 template <class T>
 NodoBinarioAVL<T>* ArbolBinarioAVL<T>::getRaiz(){
 	return this->raiz;
@@ -37,7 +37,7 @@ template <class T>
 T& ArbolBinarioAVL<T>::datoRaiz(){
 	return (this->raiz)->getDato();
 }
-//
+//devuelve la altura del arbol
 template <class T>
 int ArbolBinarioAVL<T>::altura(NodoBinarioAVL<T> *inicio){
 	int alturaIzq=0;
@@ -63,7 +63,7 @@ int ArbolBinarioAVL<T>::altura(NodoBinarioAVL<T> *inicio){
 		return (alturaDer);
 	}
 }
-
+//devuelve la cantidad de nodos en el arbol
 template <class T>
 int ArbolBinarioAVL<T>::tamano(NodoBinarioAVL<T> *inicio){
 	int nodosIzq=0;
@@ -86,23 +86,7 @@ int ArbolBinarioAVL<T>::tamano(NodoBinarioAVL<T> *inicio){
 	return nodosIzq+nodosDer+1;
 	
 }
-template <class T>
-void ArbolBinarioAVL<T>::printTreeLevelOrder(NodoBinarioAVL<T>* root) {  
-    if (!root) return;
-    std::queue<NodoBinarioAVL<T>*> q;
-    q.push(root);
-
-    while (!q.empty()) {
-        NodoBinarioAVL<T>* current = q.front();
-        q.pop();
-        
-        std::cout << current->getDato() << " ";
-
-        if (current->getHijoIzq()) q.push(current->getHijoIzq());
-        if (current->getHijoDer()) q.push(current->getHijoDer());
-    }
-    std::cout << std::endl;
-}
+//Rotacion de los nodos hacia la derecha
 template <class T>
 NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroDerecha(NodoBinarioAVL<T>* &padre){
 	NodoBinarioAVL<T> *n_padre=padre->getHijoIzq();
@@ -110,7 +94,7 @@ NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroDerecha(NodoBinarioAVL<T>* &padre){
 	n_padre->setHijoDer(padre);
 	return n_padre;
 }
-
+//Rotacion de los nodos hacia la izquierda
 template <class T>
 NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroIzquierda(NodoBinarioAVL<T>* &padre){
 	NodoBinarioAVL<T> *n_padre=padre->getHijoDer();
@@ -118,14 +102,14 @@ NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroIzquierda(NodoBinarioAVL<T>* &padre){
 	n_padre->setHijoIzq(padre);
 	return n_padre;
 }
-
+//Rotacion especifica de la secuencia nodo - izquierda - derecha
 template <class T>
 NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroIzquierdaDerecha(NodoBinarioAVL<T>* &padre){
 	NodoBinarioAVL<T> **primGiro=&(padre->hijoIzq);
 	padre->setHijoIzq(giroIzquierda(*primGiro));
 	return giroDerecha(padre);
 }
-
+//Rotacion especifica de la secuencia nodo - derecha - izquierda
 template <class T>
 NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroDerechaIzquierda(NodoBinarioAVL<T>* &padre){
 	NodoBinarioAVL<T> **primGiro=&(padre->hijoDer);
@@ -135,7 +119,6 @@ NodoBinarioAVL<T>* ArbolBinarioAVL<T>::giroDerechaIzquierda(NodoBinarioAVL<T>* &
 
 template <class T> //Algoritmo de inserción
 bool ArbolBinarioAVL<T>::insertar(T& val){
-    //cout<<"\n"<<this->raiz->getDato()<<" ";
 	NodoBinarioAVL<T> *nodoActual=this->raiz;
 	NodoBinarioAVL<T> *nNodo=new NodoBinarioAVL<T>();
 	NodoBinarioAVL<T> *n_padre, *n_padre2;
@@ -176,8 +159,6 @@ bool ArbolBinarioAVL<T>::insertar(T& val){
 		}
 
 	}
-	cout << "Tree after inserting " << val << ": ";
-    printTreeLevelOrder(this->raiz);
 	if(nodoInsertado){
 		NodoBinarioAVL<T> **nBalanceo=&(this->raiz);
 		while((*nBalanceo)!=NULL){
@@ -198,8 +179,6 @@ bool ArbolBinarioAVL<T>::insertar(T& val){
 			}
 		} 
 	}
-	cout << "Tree after inserting " << val << ": ";
-    printTreeLevelOrder(this->raiz);
 	return nodoInsertado;
 }
 
@@ -281,8 +260,6 @@ bool ArbolBinarioAVL<T>::eliminar(T& val){
 						nBalanceo=&((*nBalanceo)->hijoIzq);
 					}
 				}
-            	cout << "Tree after inserting " << val << ": ";
-                printTreeLevelOrder(this->raiz);
 				return true;
 			}else if(val<buscaNodo->getDato() && buscaNodo->getHijoIzq()!=NULL){
 				buscaNodo=buscaNodo->getHijoIzq();
@@ -325,7 +302,7 @@ bool ArbolBinarioAVL<T>::buscar(T& val){
 	}
 }
 
-//Raiz-izquierda-derecha
+//Imprime el recorrido preOrden del arbol
 template <class T>
 void ArbolBinarioAVL<T>::preOrden(NodoBinarioAVL<T> *inicio) {
 	cout<<inicio->getDato()<<" ";
@@ -337,7 +314,7 @@ void ArbolBinarioAVL<T>::preOrden(NodoBinarioAVL<T> *inicio) {
 	}
 	return;
 }
-//Izquierda-derecha-raiz
+//Imprime el recorrido inOrden del arbol
 template <class T>
 void ArbolBinarioAVL<T>::inOrden(NodoBinarioAVL<T> *inicio){
 	if(inicio->getHijoIzq()!=nullptr){
@@ -349,7 +326,7 @@ void ArbolBinarioAVL<T>::inOrden(NodoBinarioAVL<T> *inicio){
 	}
 	return;
 }
-//Izquierda-raiz-derecha
+//Imprime el recorrido posOrden del arbol
 template <class T>
 void ArbolBinarioAVL<T>::posOrden(NodoBinarioAVL<T> *inicio){
 	if(inicio->getHijoIzq()!=nullptr){
