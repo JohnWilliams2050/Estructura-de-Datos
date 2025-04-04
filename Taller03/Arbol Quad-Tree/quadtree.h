@@ -1,3 +1,8 @@
+/**
+* Taller 3. Arboles
+* Autores: Tomas Silva, Juan Pabon Vargas
+* Arbol Quad-Tree
+**/
 #ifndef __QUADTREE__H__
 #define __QUADTREE__H__
 
