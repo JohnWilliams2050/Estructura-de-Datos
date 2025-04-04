@@ -9,12 +9,13 @@
 #include <stack>
 using namespace std;
 
-
+//Constructores 
 ArbolExpresion::ArbolExpresion(){
 	this->raiz=NULL;
 }
 ArbolExpresion::~ArbolExpresion(){
 }
+//Get y set para la raiz
 NodoExpresion* ArbolExpresion::getRaiz(){
 	return this->raiz;
 }
@@ -22,6 +23,7 @@ void ArbolExpresion::setRaiz(NodoExpresion* nod){
 	this->raiz=nod;
 	return;
 }
+//Evalua la expresión
 int ArbolExpresion::evaluar(NodoExpresion* nodi){
 	if(nodi->getHijoIzq()==NULL&&nodi->getHijoDer()==NULL){
 		return (int)(nodi->getDato()-48);
@@ -53,7 +55,7 @@ int ArbolExpresion::evaluar(NodoExpresion* nodi){
 	}
 
 }
-
+//Llena desde polaca
 void ArbolExpresion::llenarDesdePrefija(string &expresion){
 
 	char cad[expresion.size()];
@@ -92,7 +94,7 @@ void ArbolExpresion::llenarDesdePrefija(string &expresion){
 	this->setRaiz(n1);
 	miCola.pop();
 }
-
+//Llena desde polaca inversa
 void ArbolExpresion::llenarDesdePosfija(string &expresion){
 
 	char cad[expresion.size()];
@@ -132,7 +134,7 @@ void ArbolExpresion::llenarDesdePosfija(string &expresion){
 	this->setRaiz(n1);
 	miCola.pop();
 }
-
+//Get para prefija - infija y posfija
 void ArbolExpresion::obtenerPrefija(NodoExpresion* inicio){
 	if(inicio==NULL){
 		return;
@@ -164,7 +166,7 @@ void ArbolExpresion::obtenerPosfija(NodoExpresion* inicio){
 		cout<<inicio->getDato()<<" ";
 	}
 }
-
+//Retorna si se realiza una operación o no - 1 o "true" de estar operando
 bool ArbolExpresion::siOperando(char car){
 	if(car=='+'||car=='-'||car=='/'||car=='*'||car=='%'){
 		return true;
