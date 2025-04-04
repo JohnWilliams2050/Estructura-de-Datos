@@ -8,14 +8,14 @@
 
 using namespace std;
 
-
+//Constructor por defecto
 template<class T>
 ArbolBinario<T>::ArbolBinario()
 {
 	this->raiz=NULL;
 }
 
-
+//mira si el arbol es vacio. Retorna true si lo es, retorna false si no lo es
 template<class T>
 bool ArbolBinario<T>::esVacio()
 {
@@ -28,25 +28,25 @@ bool ArbolBinario<T>::esVacio()
 		return false;
 	}
 }
-
+//obtiene del dato de la raiz
 template<class T>
 T& ArbolBinario<T>::datoRaiz()
 {
 	return this->raiz->obtenerDato();
 }
-
+//devuelve la altura total del arbol
 template<class T>
 int ArbolBinario<T>::altura()
 {
 	return this->raiz->altura();
 }
-
+//devuelve la cantidad total de nodos en el arbol
 template<class T>
 int ArbolBinario<T>::tamano()
 {
 	return this->raiz->tamano() ;
 }
-
+//inserta un nodo con valor val
 template<class T>
 void ArbolBinario<T>::insertar(T& val)
 {
@@ -65,7 +65,7 @@ void ArbolBinario<T>::insertar(T& val)
 }
 
 
-
+//elimina un nodo con valor val
 template<class T>
 bool ArbolBinario<T>::eliminar(T& val)
 {
@@ -97,13 +97,13 @@ bool ArbolBinario<T>::eliminar(T& val)
 }
 
 
-
+//busca el nodo con valor val
 template<class T>
 NodoBinario<T>* ArbolBinario<T>::buscar(T& val)
 {
 	return this->raiz->buscar(val);
 }
-
+//Impresion de los recorridos del arbol
 template<class T>
 void ArbolBinario<T>::preOrden()
 {
