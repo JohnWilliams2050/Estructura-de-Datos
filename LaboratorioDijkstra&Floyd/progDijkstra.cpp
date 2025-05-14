@@ -1,8 +1,9 @@
 /***************
 * Autor: Juan Pabon Vargas
 * Fecha: 14 de Mayo, 2025
-* 
-* Descripcion:
+* Tema: Estructura de Datos
+* Descripcion: En este programa se crea una matriz de adyacencia y se usa el algoritmo de Dijkstra para
+* encontrar el camino de menos costo entre todos los nodos.
 ****************/
 #include <iostream>
 #include <climits>
@@ -63,6 +64,7 @@ void dijkstra( vector<vector<int>> graph, int src, int V){
 }
 int main(){
 /* Grafo */
+	//Tamano de la matriz
 	int V = 9;
 	vector<vector<int>> graph = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
 		{ 4, 0, 8, 0, 0, 0, 0, 11, 0 },
