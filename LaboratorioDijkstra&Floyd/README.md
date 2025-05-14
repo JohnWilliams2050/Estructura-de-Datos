@@ -6,13 +6,19 @@ En este laboratorio se usan los algoritmos de Dijkstra y Floyd para encontrar el
 
 ## Compilar
 
-Usar este comando para compilar progDijkstra.cpp
+Usar este comando para compilar progDijkstra.cpp:
 
     g++ progDijkstra.cpp
 
-Usar este comando para compilar progFloyd.cpp
+Usar este comando para compilar progFloyd.cpp:
 
     g++ progFloyd.cpp
+
+## Ejecutar
+
+Para cada programa que haya sido compilado, usar este comando para ejecutarlo:
+
+        ./a.out
 
 ## Autor
 
